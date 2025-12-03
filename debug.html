@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Debugging - Tecknowfest'25</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #9C51B6;
+        }
+        .text-primary { color: var(--primary-blue); }
+        .bg-primary { background-color: var(--primary-blue); }
+        .border-primary { border-color: var(--primary-blue); }
+
+        .section-heading {
+            border-left: 4px solid var(--primary-blue);
+            padding-left: 1rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1f2937;
+        }
+
+        .event-main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .event-main-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+
+    <!-- Header / Navigation Bar -->
+ <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+
+        <!-- LOGO -->
+        <a href="index.html" class="text-xl font-bold flex items-center space-x-2" style="color: rgb(182, 142, 81);">
+            <img src="images/logo1.jpg" alt="WEBWINGS-2K25 Logo" style="height:40px; width:auto;">
+            <span>WEBWINGS-2K25</span>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden sm:flex space-x-6 text-gray-600 font-medium text-sm sm:text-base">
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+            <a href="register.html" class="px-3 py-1 bg-primary text-white rounded-lg hover:bg transition">Register</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobileMenuBtn" class="sm:hidden text-3xl text-gray-700">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MOBILE MENU DROPDOWN -->
+    <div id="mobileMenu" class="hidden sm:hidden bg-white shadow-lg border-t">
+        <nav class="flex flex-col space-y-4 p-4 text-gray-700 text-base font-medium">
+            
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+
+            <a href="register.html" class="px-3 py-2 bg-primary text-white rounded-lg shadow hover:bg transition text-center">
+                Register
+            </a>
+
+        </nav>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="py-10 md:py-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+
+            <!-- Breadcrumbs -->
+            <div class="text-sm text-gray-500 mb-6">
+                <a href="index.html" class="hover:underline">Home</a> / 
+                <a href="index.html#events" class="hover:underline">Events</a> / 
+                <span class="font-medium text-gray-700">Code Debugging</span>
+            </div>
+
+            <div class="event-main-content">
+
+                <!-- LEFT COLUMN -->
+                <div class="space-y-12">
+
+                    <!-- Banner -->
+                    <section>
+                         <div class="mb-6 w-full h-65 bg-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+    <img src="images/debug.jpg" 
+         alt="Paper Presentation Banner" 
+         class="w-full h-full object-cover">
+</div>
+
+                        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Code Debugging Competition</h1>
+
+                        <p class="text-lg text-gray-600">
+                            Test your debugging skills! Participants will be given C/C++ programs containing multiple bugs.  
+                            Your task is to identify and fix them within the given time. Accuracy and speed determine your success!
+                        </p>
+                    </section>
+
+                    <!-- RULES SECTION -->
+                    <section>
+                        <h2 class="section-heading mb-6">Rules & Regulations</h2>
+
+                        <ul class="space-y-4 text-gray-700 list-none">
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                This is an individual event (Solo participation).
+                            </li>
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                Programs will be in C or C++ with 4 to 5 bugs each.
+                            </li>
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                2 Rounds — Prelims & Finals.
+                            </li>
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                Use of mobile phones or external devices is strictly prohibited.
+                            </li>
+
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                Decision of judges is final.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- ROUNDS -->
+                    <section>
+                        <h2 class="section-heading mb-6">Rounds Overview</h2>
+
+                        <ul class="space-y-3 text-gray-700 list-disc pl-5">
+                            <li>Round 1 – Basic Bug Fixing (MCQ + Small Code Snippets)</li>
+                            <li>Round 2 – Complete Program Debugging</li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <!-- RIGHT SIDEBAR -->
+                <div class="lg:sticky lg:top-24 h-fit">
+
+                    <!-- INFO CARD -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Event Information</h2>
+
+                        <div class="space-y-4">
+
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-user text-primary w-6 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Participation</span><br>
+                                    <span class="text-sm">Individual (Solo)</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-clock text-primary w-6 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Time</span><br>
+                                    <span class="text-sm">11:30 AM - 1:00 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt text-primary w-6 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Venue</span><br>
+                                    <span class="text-sm">VPMM Architecture, I<sup>st</sup>  floor, No:1</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t">
+                            <a href="register.html" 
+                               class="w-full text-center inline-block px-4 py-3 bg-primary text-white font-bold rounded-lg hover:bg-blue-600 transition">
+                                Register Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- COORDINATORS CARD -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Event Coordinators</h2>
+
+                        <div class="space-y-4">
+
+                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div>
+                                    <span class="font-semibold text-gray-800">Pradeep M</span>
+                                    <span class="text-sm text-gray-500 block">MCA Student Coordinator</span>
+                                </div>
+                                <a href="tel:+917010314648" class="text-primary">
+                                    <i class="fas fa-phone"></i> +91 70103 14648
+                                </a>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div>
+                                    <span class="font-semibold text-gray-800">Akshaya M</span>
+                                    <span class="text-sm text-gray-500 block">MCA Student Coordinator</span>
+                                </div>
+                                <a href="tel:+919344796828" class="text-primary">
+                                    <i class="fas fa-phone"></i> +91 93447 96828
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BACK BUTTON -->
+            <div class="mt-12 pt-6 border-t border-gray-200 flex justify-end">
+                <a href="index.html#events" 
+                   class="inline-flex items-center px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Events
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+   <footer class="bg-gray-800 text-gray-300 py-6">
+  <div class="text-center text-sm">
+    &copy; Webwings-2K25 Technical Meet. All rights reserved.<br>
+                <span class="mt-2 md:mt-0">
+                    Developed by 
+                   <a href="https://www.linkedin.com/in/maheshwaran-k-b978452a1/" 
+   target="_blank" 
+   class="hover:text-white transition "
+   style="color:#9C51B6;">
+   Maheshwaran K
+</a>
+  </div>
+</footer>
+<script>
+document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+});
+</script>
+
+
+</body>
+</html>

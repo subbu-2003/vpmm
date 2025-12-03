@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Wings-2K25</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Styles for better visual fidelity */
+        :root {
+            --primary-blue: #1e88e5;
+            --secondary-green: #25D366;
+            --accent-red: #d32f2f;
+        }
+        .text-primary { color: var(--primary-blue); }
+        .bg-primary { background-color: var(--primary-blue); }
+        .border-primary { border-color: var(--primary-blue); }
+        
+        .event-card-img-container {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f5; /* Light background for the placeholder */
+            border-radius: 12px;
+        }
+
+        /* Responsive Title Sizing */
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+        }
+        @media (max-width: 640px) {
+            .main-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <style>
+    .benguiat {
+        font-family: 'Benguiat', serif !important;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+</style>
+
+</head>
+<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+<a href="home.html" class="text-xl font-bold flex items-center space-x-2" style="color: rgb(182, 142, 81);">
+    <img src="images/logo1.jpg" alt="WEBWINGS-2K25 Logo" style="height:40px; width:auto;">
+    <span>WEBWINGS-2K25</span>
+</a>
+
+
+<!-- Mobile Menu Button -->
+<button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+    <i class="fas fa-bars text-2xl"></i>
+</button>
+
+<!-- Desktop Links -->
+<nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+    <a href="#events" class="hover:text-primary transition">Events</a>
+    <a href="#contact" class="hover:text-primary transition">Contact</a>
+    <a href="#rules" class="hover:text-primary transition">Rules</a>
+</nav>
+
+<!-- Auth Buttons -->
+<div class="hidden md:flex space-x-3">
+    <a href="register.html" 
+       class="px-4 py-2 text-white font-semibold rounded-lg shadow-lg transition"
+       style="background-color: #9C51B6;">
+       Register
+    </a>
+</div>
+
+<!-- Mobile Menu Content -->
+<div id="mobileMenu" class="hidden flex-col space-y-4 bg-white shadow-md p-5 md:hidden">
+    <a href="#events" class="block text-gray-700 font-medium hover:text-primary">Events</a>
+    <a href="#contact" class="block text-gray-700 font-medium hover:text-primary">Contact</a>
+    <a href="#rules" class="block text-gray-700 font-medium hover:text-primary">Rules</a>
+
+    <a href="register.html"
+       class="block text-center px-4 py-2 text-white font-semibold rounded-lg shadow-lg"
+       style="background-color: #9C51B6;">
+       Register
+    </a>
+</div>
+
+        
+    </header>
+
+    <!-- Main Content: Hero Section -->
+    <main class="py-16 md:py-24 text-center">
+        <div class="container mx-auto px-4 max-w-4xl">
+            
+            <div class="inline-flex items-center bg-white px-5 py-2 mb-8 rounded-full 
+            text-sm font-medium border shadow-md"
+     style="border-color:#9C51B6; color:#9C51B6;">
+                
+    <i class="fas fa-calendar-alt mr-2" style="color:#9C51B6;"></i>
+    <span style="color:#9C51B6;">November 7, 2025</span>
+
+</div>
+
+<div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 100%;
+">
+    <img src="images/logo1.jpg" 
+         alt="Centered Logo" 
+         style="width: 300px; height: 1;">
+</div>
+
+
+        
+<!-- ITC Benguiat Font (Stranger Things Font) -->
+<link href="https://fonts.cdnfonts.com/css/benguiat" rel="stylesheet">
+
+<h1 class="main-title benguiat mb-4"><font color="black">WEBWINGS-2K25</font></h1>
+
+<style>
+.algerian-title {
+    font-family: 'Algerian', serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #000; /* change color if needed */
+}
+</style>
+
+
+            <div class="text-lg mb-6">
+                Organized by
+                <br> 
+                <strong class="text-xl text-primary font-bold"><font color="blue">Department of Computer Science</font></strong>
+                <p class="text-gray-500 text-base"><b>VPMM Arts & Science College,Krishnankovil</b></p>
+            </div>
+
+<a href="agenta.html" 
+   class="flex items-center justify-center px-8 py-4 text-white text-lg font-bold rounded-xl shadow-2xl transition w-full sm:w-auto"
+   style="background-color: #9C51B6;">
+    Invitation 
+</a>
+
+
+            </div>
+
+<br>
+           <!-- Detail Buttons Row -->
+<div class="flex flex-wrap justify-center gap-3 mb-16">
+
+    <!-- Rules Button -->
+    <a href="#rules" 
+       class="px-4 py-2 bg-white border text-sm rounded-full font-semibold flex items-center 
+              transition hover:bg-[#9C51B6] hover:text-white"
+       style="border-color:#9C51B6; color:#9C51B6;">
+        <i class="fas fa-file-alt mr-2"></i> Rules & Guidelines
+    </a>
+
+    <!-- Visit Website Button -->
+    <a href="https://artsandscience.vpmm.in/" target="_blank"
+       class="px-4 py-2 bg-white border text-sm rounded-full font-semibold flex items-center 
+              transition hover:bg-[#9C51B6] hover:text-white"
+       style="border-color:#9C51B6; color:#9C51B6;">
+        <i class="fas fa-globe mr-2"></i> Visit Website
+    </a>
+
+    <!-- View Location Button -->
+    <a href="https://www.google.com/maps/place/VPMM+College+of+arts+and+Science/" target="_blank"
+       class="px-4 py-2 bg-white border text-sm rounded-full font-semibold flex items-center 
+              transition hover:bg-[#9C51B6] hover:text-white"
+       style="border-color:#9C51B6; color:#9C51B6;">
+        <i class="fas fa-map-marker-alt mr-2"></i> View Location
+    </a>
+</div>    
+    </main>
+  <div class="flex justify-center items-center -mt-20">
+  <svg width="80" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+    <line x1="12" y1="5" x2="12" y2="19"/>
+    <polyline points="6 13 12 19 18 13"/>
+  </svg>
+</div>
+
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Events</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+          <!-- Event Card Template -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <!-- IMAGE -->
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/Delivering-a-Presentation.jpg" alt="Event Image" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Paper Presentation</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, I<sup>st</sup>  floor, No:1</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 10:30 AM - 11:30 AM | Team: 2m</p>
+        <a href="ppt.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+
+       <!-- Ideathon -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/quiz1.jpg" alt="Ideathon Image" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">IT Quiz</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, I<sup>st</sup>  floor, No:2</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 11:30 AM - 12:30 PM | Team: 2m</p>
+        <a href="quiz.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+
+                <!-- Code Quest Arena -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/debug.jpg" alt="Quiz Image" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Code Debugging</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, I<sup>st</sup>  floor, No:3</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 10:30 AM - 12:30 PM | Team: 1m</p>
+        <a href="debug.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+
+
+                <!-- DeCodeX -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/webdesign.jpg" alt="Debugging" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Web Designing</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, I<sup>st</sup>  floor, No:4</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 10:30 AM - 12:30 PM | Team: 1m</p>
+        <a href="web_designing.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+
+              <!-- Web Innovate -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/dance.jpg" alt="Web Designing" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">As You Like It</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, Stage</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 10:30 AM - 12:30 PM | Team: 5m</p>
+        <a href="as_you_like_it.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+                
+<!-- Talentera -->
+<div class="event-card bg-gray-50 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+
+    <div class="w-full h-48 overflow-hidden rounded-t-xl">
+        <img src="images/film.jpeg" alt="Talentera" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Short Film</h3>
+        <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>VPMM Architecture, I<sup>st</sup>  floor, No:6</p>
+        <p class="text-sm text-gray-500 mb-3"><i class="fas fa-clock mr-2"></i> 1:30 PM - 3:00 PM | Team: 5m</p>
+        <a href="short_film.html" class="text-primary hover:underline font-medium text-sm">Details &rarr;</a>
+    </div>
+</div>
+        </div>
+    </section>
+    
+<div class="flex justify-center items-center">
+  <svg width="80" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+    <line x1="12" y1="5" x2="12" y2="19"/>
+    <polyline points="6 13 12 19 18 13"/>
+</svg>
+</div>
+
+
+    <!-- Registration Process Section -->
+    <section id="register-process" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Simple Registration Process</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+                
+                <!-- Process Step 1 -->
+<!-- Process Step 1 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">01</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-door-open mr-2" style="color:#9C51B6;"></i>
+            Open Registration
+        </h3>
+        <p class="text-gray-600">Click the Register button to open the Student Registration Form.</p>
+    </div>
+</div>
+
+<!-- Process Step 2 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">02</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-user-edit mr-2" style="color:#9C51B6;"></i>
+            Fill Personal Details
+        </h3>
+        <p class="text-gray-600">Enter Student Name, College, Department, Year, and Mobile Number.</p>
+    </div>
+</div>
+
+<!-- Process Step 3 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">03</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-list-ul mr-2" style="color:#9C51B6;"></i>
+            Select Events (Max 2)
+        </h3>
+        <p class="text-gray-600">Choose up to two events from the dropdown. A third selection will be blocked.</p>
+    </div>
+</div>
+
+<!-- Process Step 4 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">04</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-credit-card mr-2" style="color:#9C51B6;"></i>
+            Make Payment
+        </h3>
+        <p class="text-gray-600">Scan the UPI QR on the form and complete the registration fee payment.</p>
+    </div>
+</div>
+
+<!-- Process Step 5 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">05</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-upload mr-2" style="color:#9C51B6;"></i>
+            Upload Payment Screenshot
+        </h3>
+        <p class="text-gray-600">Upload your payment screenshot (JPG/PNG, max size 2MB) for verification.</p>
+    </div>
+</div>
+
+<!-- Process Step 6 -->
+<div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 text-3xl font-extrabold pt-1" style="color:#9C51B6;">06</div>
+    <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center">
+            <i class="fas fa-paper-plane mr-2" style="color:#9C51B6;"></i>
+            Submit Registration
+        </h3>
+        <p class="text-gray-600">Click Submit and your registration will be successfully recorded.</p>
+    </div>
+</div>
+
+    </section>
+           <div class="flex justify-center items-center">
+  <svg width="80" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+    <line x1="12" y1="5" x2="12" y2="19"/>
+    <polyline points="6 13 12 19 18 13"/>
+</svg>
+</div>
+    <!-- Rules & Regulations Section -->
+    <section id="rules" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Rules & Regulations</h2>
+            <p class="text-center text-gray-600 mb-10">Please read and follow all guidelines for a smooth technical meet experience.</p>
+            
+           <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-left text-gray-700">
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Entries are invited from ALL Departments of Arts & Science colleges and Engineering Colleges.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Registrations ends on 5th NOV 2025.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Events are common to all UG and PG students.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Participation certificates will be given to ALL registered participants.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Participants must carry their college ID card for verification.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        All participants should report at the registration venue before 8.40 AM.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Registration fees is Rs 200/- per candidate and should be paid through online.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Judges decisions will be final and binding.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        The participants should take care of their belongings; college is not responsible for the same.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Organizers reserve the right to modify rules of events, cancel events, if need arises.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Participants should ensure that no event clashes with one another.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Any changes in the entries will have to be informed on or before 5th NOV 2025.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Lunch & Refreshments will be provided for ALL participants.
+    </li>
+
+    <li class="flex items-start">
+        <i class="fas fa-arrow-right mt-1 mr-3 flex-shrink-0" style="color:#9C51B6;"></i>
+        Any kind of misbehavior/indecency will not be allowed.
+    </li>
+</ul>
+
+        </div>
+    </section>
+    <!-- Final CTA Section -->
+         
+<div class="flex justify-center mt-6">
+    <a href="register.html" 
+       class="flex items-center justify-center text-white text-lg font-bold rounded-xl shadow-2xl transition"
+       style="background-color:#9C51B6; width:350px; padding:14px 0;">
+        Start Registration
+    </a>
+</div>
+
+
+
+</div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700 pb-10 mb-8">
+                
+                <!-- Logo & Description -->
+               <div>
+    <h4 class="text-xl font-bold text-white mb-4">WEBWINGS-2K25</h4>
+    <p class="text-sm text-justify">
+        WebWings 2K25 is proudly organized by VPMM Arts and Science College, Krishnankovil. 
+        This technical festival brings together creativity, innovation, and competitive spirit. 
+        Students from various institutions showcase their skills across multiple tech events. 
+        Join us and be part of an inspiring celebration of knowledge and talent.
+    </p>
+</div>
+
+
+              <!-- Follow Us -->
+<div>
+    <h4 class="text-lg font-semibold text-white mb-4">Follow Us</h4>
+
+    <a href="https://www.instagram.com/vpmm_web_wings_2k" 
+       target="_blank" 
+       class="text-sm hover:text-primary transition flex items-center">
+
+        <i class="fab fa-instagram mr-2" style="color:#9C51B6;"></i>
+        vpmm_web_wings_2k
+    </a>
+</div>
+
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#events" class="hover:text-primary transition">Events</a></li>
+                        <li><a href="#rules" class="hover:text-primary transition">Brochure</a></li>
+                        <li><a href="register.html" class="hover:text-primary transition">Register</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+
+               <!-- Contact Info -->
+<div>
+    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+    <ul class="space-y-2 text-sm">
+        <li class="flex items-center">
+            <i class="fas fa-envelope mr-2" style="color:#9C51B6;"></i>
+            webwings@gmail.com
+        </li>
+
+        <li class="flex items-center">
+            <i class="fas fa-phone mr-2" style="color:#9C51B6;"></i>
+            +91 63802 84958
+        </li>
+
+        <li class="mt-4">
+            VPMM Arts & Science College, Krishnankovil, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="text-center md:text-left md:flex justify-between items-center text-sm text-gray-500">
+                <span>&copy; Webwings-2K25 Technical Meet. All rights reserved.</span>
+                <span class="mt-2 md:mt-0">
+                    Developed by 
+                   <a href="https://www.linkedin.com/in/maheshwaran-k-b978452a1/" 
+   target="_blank" 
+   class="hover:text-white transition "
+   style="color:#9C51B6;">
+   Maheshwaran K
+</a>
+
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Basic JS for mobile menu (optional) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links'); // This is hidden on mobile by default
+            
+            // Simple logic to show a toast message or something similar since we don't have a real mobile menu overlay
+            if (toggleButton) {
+                toggleButton.addEventListener('click', () => {
+                    alert('Mobile Menu would open here. This design uses only desktop nav links for simplicity.');
+                });
+            }
+        });
+    </script>
+
+    <script>
+document.getElementById("menuBtn").addEventListener("click", function () {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>

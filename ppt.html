@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Presentation - Tecknowfest'25</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #9C51B6;
+        }
+        .text-primary { color: var(--primary-blue); }
+        .bg-primary { background-color: var(--primary-blue); }
+        .border-primary { border-color: var(--primary-blue); }
+
+        .section-heading {
+            border-left: 4px solid var(--primary-blue);
+            padding-left: 1rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #1f2937;
+        }
+
+        .event-main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .event-main-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+
+    <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+
+        <!-- LOGO -->
+        <a href="index.html" class="text-xl font-bold flex items-center space-x-2" style="color: rgb(182, 142, 81);">
+            <img src="images/logo1.jpg" alt="WEBWINGS-2K25 Logo" style="height:40px; width:auto;">
+            <span>WEBWINGS-2K25</span>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden sm:flex space-x-6 text-gray-600 font-medium text-sm sm:text-base">
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+            <a href="register.html" class="px-3 py-1 bg-primary text-white rounded-lg hover:bg transition">Register</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobileMenuBtn" class="sm:hidden text-3xl text-gray-700">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MOBILE MENU DROPDOWN -->
+    <div id="mobileMenu" class="hidden sm:hidden bg-white shadow-lg border-t">
+        <nav class="flex flex-col space-y-4 p-4 text-gray-700 text-base font-medium">
+            
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+
+            <a href="register.html" class="px-3 py-2 bg-primary text-white rounded-lg shadow hover:bg transition text-center">
+                Register
+            </a>
+
+        </nav>
+    </div>
+</header>
+
+
+    <!-- Main Content -->
+    <main class="py-10 md:py-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+            
+            <!-- Breadcrumbs -->
+            <div class="text-sm text-gray-500 mb-6">
+                <a href="index.html" class="hover:underline">Home</a> /
+                <a href="index.html#events" class="hover:underline">Events</a> /
+                <span class="font-medium text-gray-700">Paper Presentation</span>
+            </div>
+
+            <div class="event-main-content">
+                
+                <!-- Left Column -->
+                <div class="space-y-12">
+                    
+                    <!-- Header Section -->
+                    <section>
+                        <div class="mb-6 w-full h-65 bg-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="images/Delivering-a-Presentation.jpg" 
+                                 alt="Paper Presentation Banner"
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Paper Presentation</h1>
+                        <p class="text-lg text-gray-600">
+                            Present your ideas through compelling PowerPoint presentations. Showcase your communication skills and creativity.
+                        </p>
+                    </section>
+
+                    <!-- Rules -->
+                    <section>
+                        <h2 class="section-heading mb-6">Rules & Regulations</h2>
+                        <ul class="space-y-4 text-gray-700 list-none">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Submit papers in PDF format.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Presentation should not exceed 10 slides.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Max 2 participants per team.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> 5 minutes for presentation + 2 minutes for Q&A.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Bring both soft & hard copies.</li>
+                        </ul>
+
+                        <!-- Submission -->
+                        <div class="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-inner">
+                            <h3 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-paper-plane mr-2"></i> Submission Details</h3>
+                            <p class="mb-3 text-gray-700">Mail your papers to:</p>
+
+                            <div class="flex flex-col sm:flex-row items-center justify-between p-3 bg-white border rounded-lg">
+                                <code class="font-mono text-lg text-gray-800 break-all" id="email-address">vpmmwebwings@gmail.com</code>
+                                <button onclick="copyToClipboard('email-address')" class="mt-3 sm:mt-0 px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition">
+                                    <i class="fas fa-copy mr-1"></i> Copy Email
+                                </button>
+                            </div>
+
+                            <a href="mailto:vpmmwebwings@gmail.com?subject=Paper%20Submission"
+                               target="_blank" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                                Compose Submission Email <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Topics -->
+                    <section>
+                        <h2 class="section-heading mb-6">Topics</h2>
+                        <ul class="space-y-3 text-gray-700 list-disc pl-5">
+                            <li>AI Powered CyberSecurity</li>
+                            <li>Blockchain for Secure Data Sharing</li>
+                            <li>Anomaly Detection in Blockchain ML</li>
+                            <li>Adversarial Machine Learning</li>
+                            <li>Biometrics, AI & Blockchain Auth</li>
+                            <li>Explainable AI in CyberSecurity</li>
+                        </ul>
+                    </section>
+
+                    <!-- Judges' Criteria -->
+                    <section>
+                        <h2 class="section-heading mb-6">Judges' Criteria</h2>
+
+                        <div class="space-y-4 text-gray-700">
+
+                            <div class="p-4 bg-gray-50 rounded-lg border">
+                                <h3 class="font-semibold text-gray-900 mb-1">1. Content Quality (30%)</h3>
+                                <p class="text-sm">Originality, clarity of ideas, research depth, and topic relevance.</p>
+                            </div>
+
+                            <div class="p-4 bg-gray-50 rounded-lg border">
+                                <h3 class="font-semibold text-gray-900 mb-1">2. Presentation Skills (25%)</h3>
+                                <p class="text-sm">Confidence, communication, body language, and delivery style.</p>
+                            </div>
+
+                            <div class="p-4 bg-gray-50 rounded-lg border">
+                                <h3 class="font-semibold text-gray-900 mb-1">3. Slide Design (20%)</h3>
+                                <p class="text-sm">Visual appeal, consistency, layout, and clarity.</p>
+                            </div>
+
+                            <div class="p-4 bg-gray-50 rounded-lg border">
+                                <h3 class="font-semibold text-gray-900 mb-1">4. Technical Knowledge (15%)</h3>
+                                <p class="text-sm">Subject understanding, accuracy, and supporting evidence.</p>
+                            </div>
+
+                            <div class="p-4 bg-gray-50 rounded-lg border">
+                                <h3 class="font-semibold text-gray-900 mb-1">5. Q&A Handling (10%)</h3>
+                                <p class="text-sm">Ability to answer questions logically and confidently.</p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="lg:sticky lg:top-24 h-fit">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 mb-8">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Event Information</h2>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-users text-primary w-6 mr-3"></i>
+                                <div><span class="font-semibold">Team Members</span><br><span class="text-sm">2 maximum</span></div>
+                            </div>
+
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-clock text-primary w-6 mr-3"></i>
+                                <div><span class="font-semibold">Time</span><br><span class="text-sm">10:30 AM - 12:30 PM</span></div>
+                            </div>
+
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt text-primary w-6 mr-3"></i>
+                                <div><span class="font-semibold">Location</span><br><span class="text-sm">VPMM Architecture, 1st floor</span></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t">
+                            <a href="register.html" class="w-full text-center inline-block px-4 py-3 bg-primary text-white font-bold rounded-lg hover:bg-blue-600 transition">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Coordinators -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Event Coordinators</h2>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div>
+                                    <span class="font-semibold text-gray-800">Pradeep M</span>
+                                    <span class="text-sm text-gray-500 block">MCA Student Coordinator</span>
+                                </div>
+                                <a href="tel:+917010314648" class="text-primary"><i class="fas fa-phone"></i> +91 70103 14648</a>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg border">
+                                <div>
+                                    <span class="font-semibold text-gray-800">Akshaya M</span>
+                                    <span class="text-sm text-gray-500 block">MCA Student Coordinator</span>
+                                </div>
+                                <a href="tel:+919344796828" class="text-primary"><i class="fas fa-phone"></i> +91 93447 96828</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-12 pt-6 border-t border-gray-200 flex justify-end">
+                <a href="index.html#events" class="inline-flex items-center px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Events
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="text-center text-sm">
+            &copy; Webwings-2K25 Technical Meet. All rights reserved.<br>
+                <span class="mt-2 md:mt-0">
+                    Developed by 
+                   <a href="https://www.linkedin.com/in/maheshwaran-k-b978452a1/" 
+   target="_blank" 
+   class="hover:text-white transition "
+   style="color:#9C51B6;">
+   Maheshwaran K
+</a>
+        </div>
+    </footer>
+<script>
+document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+});
+</script>
+
+    <!-- Copy Script -->
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const textToCopy = element.textContent;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = 0;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            alert("Email copied!");
+        }
+    </script>
+
+</body>
+</html>

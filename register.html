@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecknowfest'25 - Registration Form</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #9C51B6;
+        }
+
+        .text-primary {
+            color: var(--primary-blue);
+        }
+
+        .bg-primary {
+            background-color: var(--primary-blue);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+
+    <!-- Header / Navigation Bar -->
+   <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+
+        <!-- LOGO -->
+        <a href="index.html" class="text-xl font-bold flex items-center space-x-2" style="color: rgb(182, 142, 81);">
+            <img src="images/logo1.jpg" alt="WEBWINGS-2K25 Logo" style="height:40px; width:auto;">
+            <span>WEBWINGS-2K25</span>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+            <a href="index.html#rules" class="hover:text-primary transition">Rules</a>
+        </nav>
+
+        <!-- Desktop index Button -->
+        <div class="hidden md:flex space-x-3">
+            <a href="index.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg shadow-lg">
+                Home
+            </a>
+        </div>
+
+        <!-- MOBILE HAMBURGER BUTTON -->
+        <button id="mobileMenuBtn" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MOBILE MENU DROPDOWN -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t shadow-lg">
+        <nav class="flex flex-col text-gray-700 font-medium p-4 space-y-4">
+            <a href="index.html#events" class="hover:text-primary transition">Events</a>
+            <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+            <a href="index.html#rules" class="hover:text-primary transition">Rules</a>
+
+            <a href="index.html" class="px-4 py-2 bg-primary text-white font-semibold rounded-lg shadow-lg text-center">
+                Home
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- ===================== STUDENT REGISTRATION FORM ===================== -->
+    <section class="py-12">
+        <div class="max-w-lg mx-auto bg-white shadow-lg rounded-xl p-8 border border-gray-200">
+
+            <h2 class="text-2xl font-bold text-center text-primary mb-6">
+                Student Registration Form
+            </h2>
+
+            <!-- FORM START -->
+            <form id="regForm">
+
+                <!-- Student Name -->
+                <label class="font-semibold">Student Name</label>
+                <input type="text" id="studentName"
+                    class="w-full p-3 border rounded-lg mt-1 mb-3"
+                    placeholder="Enter student name">
+
+                <!-- College Name -->
+                <label class="font-semibold">College Name</label>
+                <input type="text" id="collegeName"
+                    class="w-full p-3 border rounded-lg mt-1 mb-3"
+                    placeholder="Enter college name">
+
+                <!-- Department -->
+                <label class="font-semibold">Department</label>
+                <input type="text" id="department"
+                    class="w-full p-3 border rounded-lg mt-1 mb-3"
+                    placeholder="Enter department">
+
+                <!-- Year -->
+                <label class="font-semibold">Year</label>
+                <select id="year" class="w-full p-3 border rounded-lg mt-1 mb-3">
+                    <option value="">-- Select Year --</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+
+                <!-- Mobile Number -->
+                <label class="font-semibold">Mobile Number</label>
+                <input type="number" id="mobile"
+                    class="w-full p-3 border rounded-lg mt-1 mb-3"
+                    placeholder="Enter mobile number">
+
+
+<!-- Event Participation -->
+<label class="font-semibold">Event Participation</label>
+
+<div class="relative mt-2">
+   <button id="eventDropdownBtn" type="button"
+            class="w-full p-3 border rounded-lg bg-white text-left flex justify-between items-center">
+        <span>-- Select Events --</span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="eventDropdown" 
+        class="absolute w-full bg-white border rounded-lg shadow-md mt-1 hidden p-3 z-20">
+
+        <label class="flex items-center space-x-2 mb-2">
+            <input type="checkbox" class="event-checkbox" value="Web Designing">
+            <span>Web Designing</span>
+        </label>
+
+        <label class="flex items-center space-x-2 mb-2">
+            <input type="checkbox" class="event-checkbox" value="Coding Contest">
+            <span>Coding Contest</span>
+        </label>
+
+        <label class="flex items-center space-x-2 mb-2">
+            <input type="checkbox" class="event-checkbox" value="Debugging">
+            <span>Debugging</span>
+        </label>
+
+        <label class="flex items-center space-x-2 mb-2">
+            <input type="checkbox" class="event-checkbox" value="Technical Quiz">
+            <span>Technical Quiz</span>
+        </label>
+
+        <label class="flex items-center space-x-2">
+            <input type="checkbox" class="event-checkbox" value="Paper Presentation">
+            <span>Paper Presentation</span>
+        </label>
+    </div>
+</div>
+
+
+                <center><img src="images/payment.PNG" style="width:250px;"></center>
+                <center><b><font color="blue">Payment Number : +91 6380284958</font></b></center>
+<br>
+
+                <!-- Payment Screenshot -->
+                <label class="font-semibold">Upload Payment Screenshot (Max 2MB)</label>
+                <input type="file" id="paymentImg" accept="image/*"
+                    class="w-full p-3 border rounded-lg mt-1 mb-5">
+
+                <button type="submit"
+                    class="w-full bg-primary text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 transition">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="text-center text-sm">
+            &copy; Webwings-2K25 Technical Meet. All rights reserved.<br>
+                <span class="mt-2 md:mt-0">
+                    Developed by 
+                   <a href="https://www.linkedin.com/in/maheshwaran-k-b978452a1/" 
+   target="_blank" 
+   class="hover:text-white transition "
+   style="color:#9C51B6;">
+   Maheshwaran K
+</a>
+        </div>
+    </footer>
+
+<!-- ===================== FIXED SUBMIT SCRIPT ===================== -->
+<script>
+const scriptURL =
+ "https://script.google.com/macros/s/AKfycbynLczeM5wjMl-iqpVvRZFGX-x_FwhMn-i1ESxP2VzogOsBK6EX89U5qaVAS3lvEF_0/exec";
+
+document.getElementById("regForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    let name = document.getElementById("studentName").value.trim();
+    let college = document.getElementById("collegeName").value.trim();
+    let dept = document.getElementById("department").value.trim();
+    let year = document.getElementById("year").value;
+    let mobile = document.getElementById("mobile").value.trim();
+    let events = Array.from(document.querySelectorAll(".event-checkbox:checked"))
+                       .map(e => e.value);
+
+    let file = document.getElementById("paymentImg").files[0];
+
+    /* =================== VALIDATION =================== */
+    if (!name || !college || !dept || !year || !mobile) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    if (mobile.length !== 10) {
+        alert("Mobile number must be exactly 10 digits");
+        return;
+    }
+
+    if (events.length === 0) {
+        alert("Please select at least 1 event");
+        return;
+    }
+
+    if (!file) {
+        alert("Please upload payment screenshot");
+        return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+        alert("Only image files allowed!");
+        return;
+    }
+
+    if (file.size > 2 * 1024 * 1024) {
+        alert("Image must be less than 2MB!");
+        return;
+    }
+
+    /* ============ Convert Image → Base64 ============= */
+    const toBase64 = file => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+    });
+
+    let base64Img = await toBase64(file);
+
+    /* ============ SEND TO GOOGLE SHEET ============= */
+    const formData = {
+        studentName: name,
+        collegeName: college,
+        department: dept,
+        year: year,
+        mobile: mobile,
+        event: events.join(", "),
+        paymentImg: base64Img
+    };
+
+    // Send to Google Sheet
+    fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    });
+
+    alert("Registration submitted successfully!");
+    document.getElementById("regForm").reset();
+    document.getElementById("eventDropdownBtn").querySelector("span").textContent = "-- Select Events --";
+});
+</script>
+
+<script>
+document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+});
+</script>
+
+<!-- ===================== EVENT DROPDOWN SCRIPT ===================== -->
+<script>
+const dropdownBtn = document.getElementById("eventDropdownBtn");
+const dropdown = document.getElementById("eventDropdown");
+const checkboxes = document.querySelectorAll(".event-checkbox");
+
+dropdownBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
+});
+
+checkboxes.forEach(cb => {
+    cb.addEventListener("change", () => {
+        const selected = document.querySelectorAll(".event-checkbox:checked");
+
+        if (selected.length > 2) {
+            cb.checked = false;
+            alert("You can select only TWO events.");
+            return;
+        }
+
+        const selectedValues = Array.from(selected).map(c => c.value);
+        dropdownBtn.querySelector("span").textContent =
+            selectedValues.length > 0 ? selectedValues.join(", ") : "-- Select Events --";
+    });
+});
+
+document.addEventListener("click", function(event) {
+    if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
+        dropdown.classList.add("hidden");
+    }
+});
+</script>
+
+</body>
+</html>
