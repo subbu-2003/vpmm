@@ -51,51 +51,56 @@
 </head>
 <body class="bg-gray-50 text-gray-700 font-sans antialiased">
 
-    <!-- Header / Navigation Bar -->
-    <header class="bg-white shadow-sm sticky top-0 z-10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
-<a href="home.html" class="text-xl font-bold flex items-center space-x-2" style="color: rgb(182, 142, 81);">
-    <img src="images/logo1.jpg" alt="WEBWINGS-2K25 Logo" style="height:40px; width:auto;">
-    <span>WEBWINGS-2K25</span>
-</a>
+ <!-- Header / Navigation Bar -->
+<header class="bg-white shadow-sm sticky top-0 z-20">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
 
+        <!-- Logo -->
+        <a href="home.html" class="text-xl font-bold flex items-center gap-2 text-[#B68E51]">
+            <img src="images/logo1.jpg" alt="Logo" class="h-10 w-auto">
 
-<!-- Mobile Menu Button -->
-<button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
-    <i class="fas fa-bars text-2xl"></i>
-</button>
+            <!-- Text hidden on mobile, visible on desktop -->
+            <span class="hidden md:inline">WEBWINGS-2K25</span>
+        </a>
 
-<!-- Desktop Links -->
-<nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
-    <a href="#events" class="hover:text-primary transition">Events</a>
-    <a href="#contact" class="hover:text-primary transition">Contact</a>
-    <a href="#rules" class="hover:text-primary transition">Rules</a>
-</nav>
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-3xl"></i>
+        </button>
 
-<!-- Auth Buttons -->
-<div class="hidden md:flex space-x-3">
-    <a href="register.html" 
-       class="px-4 py-2 text-white font-semibold rounded-lg shadow-lg transition"
-       style="background-color: #9C51B6;">
-       Register
-    </a>
-</div>
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            <a href="#events" class="hover:text-[#B68E51] transition">Events</a>
+            <a href="#contact" class="hover:text-[#B68E51] transition">Contact</a>
+            <a href="#rules" class="hover:text-[#B68E51] transition">Rules</a>
+        </nav>
 
-<!-- Mobile Menu Content -->
-<div id="mobileMenu" class="hidden flex-col space-y-4 bg-white shadow-md p-5 md:hidden">
-    <a href="#events" class="block text-gray-700 font-medium hover:text-primary">Events</a>
-    <a href="#contact" class="block text-gray-700 font-medium hover:text-primary">Contact</a>
-    <a href="#rules" class="block text-gray-700 font-medium hover:text-primary">Rules</a>
+        <!-- Desktop Register Button -->
+        <div class="hidden md:flex">
+            <a href="register.html" 
+               class="px-4 py-2 text-white font-semibold rounded-lg shadow-md"
+               style="background-color:#9C51B6;">
+               Register
+            </a>
+        </div>
+    </div>
 
-    <a href="register.html"
-       class="block text-center px-4 py-2 text-white font-semibold rounded-lg shadow-lg"
-       style="background-color: #9C51B6;">
-       Register
-    </a>
-</div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden flex-col bg-white shadow-md px-6 py-4 md:hidden space-y-4">
 
-        
-    </header>
+        <!-- Mobile links appear one below another because of block behaviour -->
+        <a href="#events" class="block text-gray-700 font-medium hover:text-[#B68E51]">Events</a>
+        <a href="#contact" class="block text-gray-700 font-medium hover:text-[#B68E51]">Contact</a>
+        <a href="#rules" class="block text-gray-700 font-medium hover:text-[#B68E51]">Rules</a>
+
+        <a href="register.html"
+           class="block text-center px-4 py-2 text-white font-semibold rounded-lg shadow-md"
+           style="background-color:#9C51B6;">
+           Register
+        </a>
+    </div>
+</header>
+
 
     <!-- Main Content: Hero Section -->
     <main class="py-16 md:py-24 text-center">
@@ -584,12 +589,16 @@
         });
     </script>
 
-    <script>
-document.getElementById("menuBtn").addEventListener("click", function () {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("hidden");
-});
+    
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
 </script>
+
 
 </body>
 </html>
